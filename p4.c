@@ -17,7 +17,7 @@ double f(float t, float p)
 int main ()
 {
 	float k, i;
-	scanf ("%f  %f", &k, &i);
+	scanf ("%f %f", &k, &i);
 	printf("%g + %g = %g", k, i, f(k,i));
 	return 0;
 }
