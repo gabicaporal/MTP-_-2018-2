@@ -5,21 +5,16 @@
 
 #include<stdio.h>
 
-int main()
+int main ()
 {
-	char numero[256];
-	int i, n_=0, n_2, k;
-	printf("Digite: ");
-	scanf("%s", numero);
-	for(i=0; numero[i]!= '\0'; i++)
-	{
-		if(numero[i]>=48 && numero[i]<=57)
+	char v[25];
+	int i, y=0;
+	scanf("%s", v);
+	for (i=0; v[i] != '\0'; i++)
+		if (v[i] >= 48 && v[i] <= 57)
 		{
-		 	n_2 = numero[i] - 48;
-			k = n_2 + n_; 
-			n_ = k*10;
+			y = y*10 + (v[i] - '0');
 		}
-	}
-	printf("%d", k);
+	printf("%d", y);
 	return 0;
 }
