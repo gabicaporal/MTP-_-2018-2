@@ -15,7 +15,7 @@ struct ponto
 struct ponto *gerar (int n) 
 {
 
-	struct ponto p = (struct ponto) malloc(n*sizeof(struct ponto));
+	struct ponto *p = (struct ponto*) malloc(n*sizeof(struct ponto));
 	int i;
 
 	for (i=0; i<n; i++)
