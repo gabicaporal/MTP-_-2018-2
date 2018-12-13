@@ -6,21 +6,21 @@
 #include <stdlib.h>
 #include <math.h>
 
-struct pont
+struct ponto
 {
 	double x;
 	double y;
 };
 
-struct pont *gerar (int k)
+struct ponto *gerar (int n)
 {
-	struct pont *p = (struct pont*) malloc(k*sizeof(struct pont));
+	struct ponto *p = (struct ponto*) malloc(n*sizeof(struct ponto));
 	int i;
-	printf ("\n\nPontos gerados sao: \n");
-	for (i=0; i<k; i++)
+	printf ("\n\nPontos gerados: \n");
+	for (i=0; i<n; i++)
 	{
-		(*p).x = cos(i*2.0*M_PI/(k-1));
-		(*p).y = sin(i*2.0*M_PI/(k-1));
+		(*p).x = cos(i*2.0*M_PI/(n-1));
+		(*p).y = sin(i*2.0*M_PI/(n-1));
 		printf ("(%.3lf, %.3lf) \n", (*p).x, (*p).y);
 	}
 	return p;
@@ -28,12 +28,12 @@ struct pont *gerar (int k)
 
 int main ()
 {
-	struct pont *p;
-	int k;
+	struct ponto *p;
+	int n;
 	printf ("Numero de pontos que deseja encontrar: ");
-	scanf ("%d", &k);
+	scanf ("%d", &n);
 	getchar();
-	p = gerar(k);
+	p = gerar(n);
 	free(p);
 	return 0;
 }
